@@ -39,6 +39,7 @@ Panels:
         - /PointCloud21
         - /TF1
         - /TF1/Frames1
+        - /Map2
       Splitter Ratio: 0.5
     Tree Height: 767
 Preferences:
@@ -194,6 +195,16 @@ Visualization Manager:
       Unreliable: false
       Use Timestamp: false
       Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /costmap_node/costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -222,16 +233,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1069.9913330078125
+      Distance: 874.1926879882812
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 129.53565979003906
-        Y: 211.48638916015625
-        Z: -32.41212463378906
+        X: 44.748172760009766
+        Y: 33.33238983154297
+        Z: 47.252113342285156
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -240,7 +251,7 @@ Visualization Manager:
       Pitch: 1.5697963237762451
       Target Frame: ego_vehicle
       Value: Orbit (rviz)
-      Yaw: 3.1509945392608643
+      Yaw: 3.1409847736358643
     Saved: ~
 Window Geometry:
   Displays:
