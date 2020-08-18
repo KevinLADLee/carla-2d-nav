@@ -1,6 +1,6 @@
 <launch>
   <!-- Arguments -->
-  <arg name="cmd_vel_topic" default="/carla/ego_vehicle/twist_cmd" />
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
   <arg name="odom_topic" default="/carla/ego_vehicle/odometry" />
   <!-- <arg name="move_forward_only" default="true"/> -->
 

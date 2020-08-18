@@ -34,6 +34,10 @@
     <arg name="spawn_point" value="$(arg spawn_point)"/>
   </include>
 
+  <node pkg="carla_ackermann_control" type="carla_ackermann_control_node.py" name="carla_ackermann_control_$(arg role_name)" output="screen">
+    <param name="role_name" value="$(arg role_name)" />
+  </node>
+
   <include file="$(find carla_manual_control)/launch/carla_manual_control.launch">
     <arg name='role_name' value='$(arg role_name)'/>
   </include>

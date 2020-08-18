@@ -236,7 +236,7 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
-      Topic: /move_base/DWAPlannerROS/local_plan
+      Topic: /move_base/TebLocalPlannerROS/local_plan
       Unreliable: false
       Value: true
   Enabled: true
@@ -267,25 +267,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 74.54167938232422
+      Distance: 20.166349411010742
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -4.779234886169434
-        Y: -17.751708984375
-        Z: 10.698601722717285
+        X: 3.1210246086120605
+        Y: -6.4029107093811035
+        Z: 6.455137252807617
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9047969579696655
+      Pitch: 1.0047966241836548
       Target Frame: ego_vehicle
       Value: Orbit (rviz)
-      Yaw: 5.714166164398193
+      Yaw: 1.6159800291061401
     Saved: ~
 Window Geometry:
   Displays:
@@ -306,4 +306,4 @@ Window Geometry:
     collapsed: false
   Width: 1865
   X: 41
-  Y: 66
+  Y: 36
