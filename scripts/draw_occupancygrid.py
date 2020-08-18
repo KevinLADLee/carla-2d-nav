@@ -74,7 +74,7 @@ class CarlaGrid(object):
         self.world.apply_settings(settings)
 
         waypoints = self.town_map.generate_waypoints(2)
-        margin = 200
+        margin = 50
 
         self.max_x = max(waypoints, key=lambda x: x.transform.location.x).transform.location.x + margin
         self.max_y = max(waypoints, key=lambda x: x.transform.location.y).transform.location.y + margin
