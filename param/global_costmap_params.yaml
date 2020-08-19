@@ -3,8 +3,11 @@ global_costmap:
   robot_base_frame: ego_vehicle
 
   update_frequency: 1.0
-  publish_frequency: 10.0
+  publish_frequency: 2.0
   transform_tolerance: 0.5
 
   static_map: true
- 
+  plugins:
+    - {name: static_layer,            type: "costmap_2d::StaticLayer"}
+#     - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}

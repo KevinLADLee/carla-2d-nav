@@ -4,14 +4,25 @@
   <arg name="odom_topic" default="/carla/ego_vehicle/odometry" />
   <!-- <arg name="move_forward_only" default="true"/> -->
 
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+    <!-- See all params at http://wiki.ros.org/pointcloud_to_laserscan -->
+    <param name="min_height" value="0.1"/>
+    <param name="max_height" value="3"/>
+    <param name="range_min" value="0.5"/>
+    <param name="range_max" value="30.0"/>
+    <param name="target_frame" value="ego_vehicle"/>
+    <remap from="cloud_in" to="/carla/ego_vehicle/lidar/lidar1/point_cloud"/>
+    <remap from="scan" to="/scan"/>
+  </node>
+
+
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
   	<!-- <param name="base_global_planner" value="global_planner/GlobalPlanner" />
 		<param name="planner_frequency" value="1.0" />
 		<param name="planner_patience" value="5.0" /> -->
     <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
-		<param name="controller_frequency" value="5.0" />
-		<param name="controller_patience" value="15.0" />
+    <param name="recovery_behavior_enabled" value="true" />
     <rosparam file="$(find carla-2d-nav)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find carla-2d-nav)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find carla-2d-nav)/param/local_costmap_params.yaml" command="load" />

@@ -2,5 +2,5 @@ free_thresh: 0.2
 image: Town05.png
 negate: 0
 occupied_thresh: 0.65
-origin: [-476.0448913574219, -408.1249084472656, 0]
-resolution: 0.1
+origin: [-326.0448913574219, -258.1249084472656, 0]
+resolution: 0.5

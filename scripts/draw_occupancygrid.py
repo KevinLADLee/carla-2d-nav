@@ -16,7 +16,8 @@ import yaml
 import collections
 
 # 10 cm/pix
-PIXELS_PER_METER = 10
+# PIXELS_PER_METER = 10
+PIXELS_PER_METER = 2
 
 class CarlaGrid(object):
     def __init__(self, name, args, timeout):
@@ -154,8 +155,8 @@ class CarlaGrid(object):
                 cv.fillPoly(img, [poly_array], (255), lineType=cv.LINE_AA)
                 # cv.polylines(img,[poly_array],True,(0,0,255))
 
-        init = self.world_to_pixel(0,0)
-        cv.circle(img, (init[0],init[1]), 5, (100), -1) 
+        # init = self.world_to_pixel(0,0)
+        # cv.circle(img, (init[0],init[1]), 5, (100), -1) 
 
         cv.imwrite("%s.png" % self.args.map, img) 
         # gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
